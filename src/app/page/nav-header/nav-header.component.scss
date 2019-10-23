@@ -1,0 +1,18 @@
+mat-toolbar {
+  justify-content: space-between;
+  background: #1976d2;
+}
+
+.navbar-right {
+  button {
+    background: #169bd5;
+  }
+
+  button:nth-child(n + 1):nth-child(-n + 5) {
+    margin-left: .5rem;
+  }
+
+  button:nth-child(6) {
+    background-color: transparent;
+  }
+}
