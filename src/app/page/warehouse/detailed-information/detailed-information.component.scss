@@ -1,0 +1,40 @@
+
+
+.radius-l-none {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-button {
+  background: #1976d2;
+  border: none;
+  width: 50px;
+  cursor: pointer;
+
+
+  &:focus {
+    outline: none;
+  }
+
+  mat-icon {
+    color: #ffffff;
+  }
+}
+
+
+.table {
+  width: 100%;
+
+  tr th {
+    background-color: #eceff1;
+    font-weight: 700;
+  }
+}
+
+.empty-box {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

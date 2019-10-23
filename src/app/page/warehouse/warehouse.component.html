@@ -1,0 +1,157 @@
+<div class="content bg-white">
+  <h3 class="content-title">新建退仓库通知单</h3>
+
+  <app-warehouse-card>
+    <div ngProjectAs="subtitle" class="d-flex full justify-content-between align-items-center">
+      <span>提示信息</span>
+      <button mat-icon-button>
+        <mat-icon svgIcon="close"></mat-icon>
+      </button>
+    </div>
+    <div ngProjectAs="content">
+      <p class="warehouse-p">1、确认删除之后的单据将不存在</p>
+      <p class="warehouse-p">2、确认提交之后的单据将不能撤回</p>
+    </div>
+  </app-warehouse-card>
+
+  <div class="pt-3">
+    <app-warehouse-card>
+      <div ngProjectAs="subtitle" class="d-flex full justify-content-between align-items-center">
+        <span>主单信息</span>
+      </div>
+      <div ngProjectAs="content">
+        <div class="d-flex justify-content-between flex-wrap">
+          <div class="d-flex item pl-3">
+            <label>通知单号:</label>
+            <div class="form-control disable">
+              <mat-form-field class="select" appearance="outline">
+                <input matInput placeholder="通知单号" value="RT2019-10-19-WEGO.139249946721-1002" disabled="true">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="d-flex item pl-3">
+            <label>退仓类型:</label>
+            <div class="form-control">
+              <mat-form-field class="select" appearance="outline">
+                <mat-select placeholder="请选择退仓类型">
+                  <mat-option value="列表1">列表1</mat-option>
+                  <mat-option value="列表2">列表2</mat-option>
+                  <mat-option value="列表3">列表3</mat-option>
+                  <mat-option value="列表4">列表4</mat-option>
+                  <mat-option value="列表5">列表5</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="d-flex item pl-3">
+            <label>发货地:</label>
+            <div class="form-control">
+              <mat-form-field class="select" appearance="outline">
+                <input matInput placeholder="请选择发货地">
+                <mat-icon matSuffix svgIcon="more_horiz"></mat-icon>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="d-flex item pl-3">
+            <label>收货地:</label>
+            <div class="form-control">
+              <mat-form-field class="select" appearance="outline">
+                <input matInput placeholder="请选择收货地">
+                <mat-icon matSuffix svgIcon="more_horiz"></mat-icon>
+
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="d-flex item pl-3 full">
+            <label>备注:</label>
+            <div class="form-control textarea">
+              <mat-form-field appearance="outline">
+                <textarea matInput rows="3" placeholder="备注"></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </app-warehouse-card>
+  </div>
+
+  <div class="pt-3">
+    <app-warehouse-card>
+      <div ngProjectAs="subtitle" class="d-flex full justify-content-between align-items-center">
+        <span>明细信息</span>
+      </div>
+      <div ngProjectAs="content">
+        <mat-tab-group>
+          <mat-tab label="商品明细">
+            <app-detailed-information></app-detailed-information>
+          </mat-tab>
+          <mat-tab label="商品明细">
+            <app-detailed-information></app-detailed-information>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </app-warehouse-card>
+  </div>
+
+  <div class="pt-3">
+    <app-warehouse-card>
+      <div ngProjectAs="subtitle" class="d-flex full justify-content-between align-items-center">
+        <span>制单信息</span>
+      </div>
+      <div ngProjectAs="content">
+        <div class="p-3">
+          <mat-grid-list cols="5" rowHeight="8:1">
+            <mat-grid-tile>
+              <div class="grid-title-value">制单人:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="grid-title-value">提交人:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="grid-title-value">审批人:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="grid-title-value">驳回人:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="grid-title-value">单据状态:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="grid-title-value">制单日期:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="grid-title-value">提交日期:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="grid-title-value">审批日期:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="grid-title-value">驳回日期:</div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="grid-title-value">参考类型:</div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+      </div>
+    </app-warehouse-card>
+  </div>
+
+  <div class="pt-3">
+    <app-warehouse-card>
+      <div ngProjectAs="subtitle" class="d-flex full justify-content-between align-items-center">
+        <span>留言</span>
+      </div>
+      <div ngProjectAs="content">
+        <div class="pl-3 pr-3 leave-message">
+          <mat-form-field class="textarea" appearance="outline" color="primary">
+            <textarea rows="4" matInput placeholder="请输入留言信息"></textarea>
+          </mat-form-field>
+          <div class="d-flex justify-content-end"><span style="color: #babfc4">1/500</span></div>
+        </div>
+      </div>
+    </app-warehouse-card>
+  </div>
+</div>

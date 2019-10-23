@@ -1,0 +1,86 @@
+<div class="d-flex justify-content-between p-3">
+  <div>
+    <input class="input" type="text" placeholder="请输入商品编号">
+  </div>
+  <div class="d-flex">
+    <input class="input radius-l-none" type="text" placeholder="请输入商品编号">
+    <button matRipple class="search-button">
+      <mat-icon svgIcon="search"></mat-icon>
+    </button>
+  </div>
+</div>
+<div class="p-3">
+  <table class="table" mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="img">
+      <th mat-header-cell *matHeaderCellDef>图片</th>
+      <td mat-cell *matCellDef="let element">{{element.img}}</td>
+    </ng-container>
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>商品编号</th>
+      <td mat-cell *matCellDef="let element">{{element.id}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>商品名称</th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="brand">
+      <th mat-header-cell *matHeaderCellDef>商品品牌</th>
+      <td mat-cell *matCellDef="let element"> {{element.brand}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="generalCategory">
+      <th mat-header-cell *matHeaderCellDef>总类</th>
+      <td mat-cell *matCellDef="let element"> {{element.generalCategory}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="medium">
+      <th mat-header-cell *matHeaderCellDef>中类</th>
+      <td mat-cell *matCellDef="let element"> {{element.medium}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="small">
+      <th mat-header-cell *matHeaderCellDef>小小类</th>
+      <td mat-cell *matCellDef="let element"> {{element.small}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="noticeNumber">
+      <th mat-header-cell *matHeaderCellDef>通知数据</th>
+      <td mat-cell *matCellDef="let element"> {{element.noticeNumber}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="tagPrice">
+      <th mat-header-cell *matHeaderCellDef>吊牌假</th>
+      <td mat-cell *matCellDef="let element"> {{element.tagPrice}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="tagAmount">
+      <th mat-header-cell *matHeaderCellDef>吊牌金额</th>
+      <td mat-cell *matCellDef="let element"> {{element.tagAmount}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="retailPlus">
+      <th mat-header-cell *matHeaderCellDef>零售价</th>
+      <td mat-cell *matCellDef="let element"> {{element.retailPlus}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="retailAmount">
+      <th mat-header-cell *matHeaderCellDef>零售金额</th>
+      <td mat-cell *matCellDef="let element"> {{element.retailAmount}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="operating">
+      <th mat-header-cell *matHeaderCellDef>操作</th>
+      <td mat-cell *matCellDef="let element"> {{element.operating}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <div class="empty-box">
+    暂无数据
+  </div>
+</div>
+
